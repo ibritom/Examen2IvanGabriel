@@ -34,3 +34,8 @@ def test_divisible_tempo_numero_pequenno(objeto):
 def test_divisible_tempo_primo(objeto):
     # 7 es primo → [1, 7]
     assert objeto.DivisibleTempo(7) == [1, 7]
+
+def test_encuentra_elemento_en_lista(objeto):
+    lista = [1, 2, 3, 4, 5]
+    elemento = 3
+    assert objeto.Encuentra(lista, elemento) is True
