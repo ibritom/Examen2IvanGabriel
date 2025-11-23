@@ -15,7 +15,7 @@ def test_ObtieneMasBailable_NumerosIguales():
 
 def test_ObtieneMasBailable_ListaVacia():
     miClase = MiClase(5, 120, 12, [], [])
-    lista = []
+    lista = ["Canción 1"]
 
     resultado = miClase.ObtieneMasBailable(lista)
     assert resultado is None
