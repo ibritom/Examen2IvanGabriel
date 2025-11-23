@@ -1,20 +1,18 @@
 import sys
 import os
 
-# Agrega la carpeta raíz al path
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pytest
-from Examen2 import MiClase   # Asegúrate que Examen2.py está en la carpeta raíz del proyecto
+from Examen2 import MiClase   
 
-# -------------------------------------------------
-# FIXTURE: crea un objeto de MiClase reutilizable
-# -------------------------------------------------
+
 @pytest.fixture
 def objeto():
     return MiClase(5, 120, 12, [], [])
 
 # -------------------------------------------------
-# PRUEBAS PARA ObtieneValencia
+# pruebas de ObtieneValencia
 # -------------------------------------------------
 
 def test_obtiene_valencia_con_digitos_impares(objeto):
@@ -26,7 +24,7 @@ def test_obtiene_valencia_sin_digitos_impares(objeto):
     assert objeto.ObtieneValencia(24680) == 0
 
 # -------------------------------------------------
-# PRUEBAS PARA DivisibleTempo
+# pruebas de DivisibleTempo
 # -------------------------------------------------
 
 def test_divisible_tempo_numero_pequenno(objeto):
